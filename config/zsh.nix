@@ -51,15 +51,6 @@
     initContent = ''
       # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      
-      # Custom keybindings
-      bindkey '^[[A' history-search-backward
-      bindkey '^[[B' history-search-forward
-      
-      # Auto-start Hyprland on tty1
-      if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-        exec Hyprland
-      fi
     '';
   };
   
