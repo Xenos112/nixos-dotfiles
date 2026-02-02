@@ -6,6 +6,7 @@
     ./config/tmux.nix
     ./config/hyprland.nix
     ./config/kitty.nix
+    ./config/foot.nix
   ];
 
 	home.username = "xenos";
@@ -14,7 +15,6 @@
 
 
 	home.file.".config/waybar".source = ./config/waybar;
-	home.file.".config/kitty".source = ./config/kitty;
 	home.file.".config/nvim".source = ./config/nvim;
 	home.file.".config/rofi".source = ./config/rofi;
 	home.file.".config/xenos".source = ./config/xenos;
