@@ -6,9 +6,13 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 	};
 
-	outputs = { nixpkgs, home-manager, ...}: {
+	outputs = { nixpkgs, home-manager,stylix, ...}@inputs: {
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
@@ -21,6 +25,7 @@
 						backupFileExtension = "backup";
 					};
 				}
+        stylix.nixosModules.stylix
 			];
 		};
 	};

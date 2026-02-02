@@ -112,4 +112,14 @@ in
       noto-fonts
       noto-fonts-color-emoji
     ];
+
+
+  # Stylix config
+  stylix.enable = true;
+  stylix.polarity = "dark";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+  stylix.opacity = {
+    terminal = 0.95;
+  };
+  stylix.autoEnable = true;
 }
