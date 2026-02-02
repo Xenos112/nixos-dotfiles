@@ -1,0 +1,19 @@
+{ config, pkgs, ... }:
+{
+  imports = [
+    ./config/git.nix
+    ./config/zsh.nix
+    ./config/tmux.nix
+  ];
+
+	home.username = "xenos";
+	home.homeDirectory = "/home/xenos";
+	home.stateVersion = "25.05";
+
+	home.file.".config/hypr".source = ./config/hypr;
+	home.file.".config/waybar".source = ./config/waybar;
+	home.file.".config/kitty".source = ./config/kitty;
+	home.file.".config/nvim".source = ./config/nvim;
+	home.file.".config/rofi".source = ./config/rofi;
+	home.file.".config/xenos".source = ./config/xenos;
+}
