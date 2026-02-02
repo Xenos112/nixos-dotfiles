@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
 {
+  stylix.targets.hyprland.enable = true;
+  
   wayland.windowManager.hyprland = {
     enable = true;
     
     settings = {
-      # Monitor configuration
       monitor = ",preferred,auto,1";
 
       # Environment variables
@@ -24,50 +26,17 @@
       "$browser" = "zen-browser";
       "$mainMod" = "SUPER";
 
-      # Catppuccin color scheme
-      "$rosewater" = "rgb(f5e0dc)";
-      "$flamingo" = "rgb(f2cdcd)";
-      "$pink" = "rgb(f5c2e7)";
-      "$mauve" = "rgb(cba6f7)";
-      "$red" = "rgb(f38ba8)";
-      "$maroon" = "rgb(eba0ac)";
-      "$peach" = "rgb(fab387)";
-      "$yellow" = "rgb(f9e2af)";
-      "$green" = "rgb(a6e3a1)";
-      "$teal" = "rgb(94e2d5)";
-      "$sky" = "rgb(89dceb)";
-      "$sapphire" = "rgb(74c7ec)";
-      "$blue" = "rgb(89b4fa)";
-      "$lavender" = "rgb(b4befe)";
-      "$text" = "rgb(cdd6f4)";
-      "$subtext1" = "rgb(bac2de)";
-      "$subtext0" = "rgb(a6adc8)";
-      "$overlay2" = "rgb(9399b2)";
-      "$overlay1" = "rgb(7f849c)";
-      "$overlay0" = "rgb(6c7086)";
-      "$surface2" = "rgb(585b70)";
-      "$surface1" = "rgb(45475a)";
-      "$surface0" = "rgb(313244)";
-      "$base" = "rgb(1e1e2e)";
-      "$mantle" = "rgb(181825)";
-      "$crust" = "rgb(11111b)";
-
-      "$borderColor" = "$surface2";
-      "$inactiveColor" = "$surface0";
-
-      # General settings
+      # General settings - REMOVED colors, using Stylix defaults
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "$borderColor";
-        "col.inactive_border" = "$inactiveColor";
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
       };
 
-      # Decoration settings
+      # Decoration settings - REMOVED colors
       decoration = {
         rounding = 4;
         rounding_power = 2;
@@ -78,7 +47,6 @@
           enabled = true;
           range = 4;
           render_power = 3;
-          color = "rgba(1a1a1aee)";
         };
 
         blur = {

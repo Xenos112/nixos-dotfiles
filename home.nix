@@ -5,6 +5,7 @@
     ./config/zsh.nix
     ./config/tmux.nix
     ./config/hyprland.nix
+    ./config/kitty.nix
   ];
 
 	home.username = "xenos";
