@@ -100,6 +100,7 @@ in
     fzf
     repgrep
     tmux
+    gcc
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
